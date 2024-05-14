@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bio-guia</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+</head>
+
+<body>
+    <header>
+
+        <div class="container">
+            <p class="logo">Bio-guia!</p>
+            <nav>
+                <a href="#somos-proya">Quienes Somos</a>
+                <a href="#nuestros-programas">Nuestro Programa</a>
+                <a href="#caracteristicas">Características</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <h1>Aprendé de animales <br>y donde encontrarlos</h1>
+        <button><a href="{{ url_for('predecir') }}">BUSCALOS YA!</a></button>
+    </section>
+
+    <section id="somos-proya">
+        <div class="container">
+            <div class="img-container"></div>
+            <div class="texto">
+
+                <h2>Somos <span class="color-acento">Bio-guia!</span></h2>
+                <p>En Bio-guia, nos apasiona el fascinante mundo de los animales terrestres.
+                    Somos un equipo de amantes de la naturaleza dedicados a proporcionar información
+                    exhaustiva y entretenida sobre la vida salvaje que habita en nuestro planeta.</p>
+                <p>
+                    En nuestra plataforma, encontrarás una amplia variedad de contenido relacionado
+                    con animales terrestres, desde artículos informativos sobre sus hábitos y
+                    características hasta noticias sobre conservación y descubrimientos científicos.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="nuestros-programas">
+        <div class="container">
+            <h2>Nuestro Programa</h2>
+            <div class="programas">
+                <div class="carta">
+                    <h3>Animales domesticos</h3>
+                    <p>Descubre la fascinante vida de los animales domésticos que comparten nuestros hogares.
+                        Desde las travesuras de nuestras mascotas de cuatro patas hasta las peculiaridades de
+                         las emplumadas y escamosas, explora el cuidado, comportamiento y la conexión especial
+                          que tenemos con ellos. Déjate cautivar por la calidez y alegría que traen a nuestras
+                           vidas.</p>
+                    <!--button>+ Info</button-->
+                </div>
+                <div class="carta">
+                    <h3> Animales rurales </h3>
+                    <p>Explora el fascinante mundo de los animales rurales, vitales para la vida en el campo. 
+                        Desde las vacas y caballos hasta las gallinas y ovejas, descubre su importancia, cuidado
+                         y belleza en la agricultura y la vida rural. Explora su papel en la producción de 
+                         alimentos y su conexión con la tierra y las comunidades rurales.
+                        </p>
+                    <!--button>+ Info</button-->
+                </div>
+                <div class="carta">
+                    <h3>Animales peligrosos</h3>
+                    <p>Explora el intrigante mundo de los animales peligrosos, criaturas que inspiran respeto
+                         y cautela por su potencial amenaza. Desde depredadores majestuosos hasta reptiles sigilosos,
+                          descubre su fascinante biología y comportamiento, así como las precauciones necesarias
+                           para coexistir de manera segura. ¡Embárcate en un viaje cautivador por el lado salvaje de la naturaleza!</p>
+                    <!--button>+ Info</button-->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="final">
+        <h2>Listo para explorar?</h2>
+        <button><a href="{{ url_for('predecir') }}">BUSCALOS YA!</a></button>
+
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; Bio-guia <span id="year"></span></p>
+
+        </div>
+    </footer>
+
+</body>
+<script>
+    // Obtener el elemento span donde se mostrará el año
+var yearSpan = document.getElementById("year");
+
+// Obtener el año actual
+var currentYear = new Date().getFullYear();
+
+// Actualizar el contenido del span con el año actual
+yearSpan.textContent = currentYear;
+</script>
+</html>
